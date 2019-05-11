@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: calculator-service
+
+server:
+  port: 0
+
+logging:
+  level:
+    ROOT: DEBUG
+      
+eureka:
+  client:
+    enabled: true
+    healthcheck:
+      enabled: true
+    serviceUrl:
+        defaultZone: http://localhost:50000/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2    
+    instance-id: calculator-service
+    appname: calculator-service
+    prefer-ip-address: true

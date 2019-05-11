@@ -1,0 +1,16 @@
+
+server:
+  port: 50001
+#Optional
+eureka:
+  client:
+    enabled: true
+    healthcheck:
+      enabled: true
+    serviceUrl:
+        defaultZone: http://localhost:50000/eureka/
+  instance:
+    appname: feign-service
+spring:
+  application:
+    name: feign-service-app      
